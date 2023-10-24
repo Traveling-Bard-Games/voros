@@ -279,11 +279,15 @@ function startGame() {
   menuObjects = [];
   animate(0);
   isGameStart = false;
-  alarmSound.addEventListener('ended', function () {
-    setTimeout(() => {
-      runBgMusic();
-    }, 500);
-  }, true);
+  setTimeout(() => {
+    runBgMusic();
+  }, 1500);
+  //have to do a few more checks for when user goes straight to play
+  // alarmSound.addEventListener('ended', function () {
+  //   setTimeout(() => {
+  //     runBgMusic();
+  //   }, 500);
+  // }, true);
   startTime = new Date();
   advanceGame();
 };
