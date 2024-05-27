@@ -508,7 +508,7 @@ class Circle {
 
     ctx.font = "35px VT323";
     ctx.fillStyle = "black";
-    let txt = "menu";
+    let txt = "lore"; //temp, was menu before
     let txtWidth = ctx.measureText(txt).width;
     ctx.fillText(txt, this.x - txtWidth/2, this.y
   );
