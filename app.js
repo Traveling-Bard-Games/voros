@@ -63,8 +63,10 @@ startAudio.src = "Assets/start.wav";
 startAudio.loop = false;
 
 let alarmSound = new Audio();
-alarmSound.src = "Assets/Battle Stations loop.wav";
+alarmSound.src = "Assets/battle-stations-loop.mp3";
 alarmSound.loop = false;
+alarmSound.volume = 0.5;
+
 
 let titleBG = new Audio();
 titleBG.src = "Assets/spaceship-ambience-with-effects-21420.mp3";
@@ -256,14 +258,14 @@ function runType(index) {
 };
 
 function animTxt(index) {
-  if (index === titleScript.length) {
+  if (index >= titleScript.length) {
     alarmSound.play();
     setTimeout(function() {
       titleCtx.clearRect(0, 0, titleCanvas.width, titleCanvas.height);
       //fadeMusic(titleBG);
       titleBG.pause();
       startGame();
-    }, 3000)
+    }, 8000)
   };
   if (index < titleScript.length) {
     titleCtx.clearRect(0, 0, titleCanvas.width, titleCanvas.height);
